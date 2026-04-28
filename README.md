@@ -1,6 +1,5 @@
-# AI_Finance
+# AI Finance Orchestrator
 
-# Prototipo de Agente de IA para Facturación Automática en AWS
 
 ## 📄 Descripción general
 
