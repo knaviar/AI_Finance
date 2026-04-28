@@ -60,8 +60,7 @@ Lambda 3 — facturacion-sender
 
 ```
 AI_Finance/
-├── README.md                          # Este archivo - Documentación principal
-├── manual_facturacion_aws.docx        # Manual detallado del proceso
+├── README.md                          # Documentación principal
 │
 ├── docs/                              # 📚 Documentación técnica adicional
 │   └── manual_facturacion_aws.docx        # Manual detallado del proceso
