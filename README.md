@@ -1,7 +1,5 @@
 # AI Finance Orchestrator
 
-> Pipeline serverless que recibe emails con facturas Excel, genera cuentas de cobro mediante IA y las envía automáticamente por correo.
-> 
 ## 📄 Descripción general
 
 Este repositorio contiene la documentación del **prototipo funcional de un agente de Inteligencia Artificial** que automatiza el proceso de facturación empresarial en AWS.
