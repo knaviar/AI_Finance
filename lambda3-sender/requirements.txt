@@ -1,0 +1,1 @@
+# Sin dependencias externas — usa boto3 del runtime de Lambda
