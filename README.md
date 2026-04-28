@@ -11,13 +11,47 @@ El objetivo principal de esta documentación es **servir como guía técnica pas
 
 
 ## Tabla de contenidos
-
-- [Arquitectura](#arquitectura)
 - [Estructura del Repositorio](#-estructura-del-repositorio)
+- [Arquitectura](#arquitectura)
 - [Componentes](#componentes)
 - [Recursos AWS](#recursos-aws)
 - [Variables de entorno](#variables-de-entorno)
 
+
+---
+## 📁 Estructura del Repositorio
+
+```
+AI_Finance/
+├── README.md                          # Documentación principal
+│
+├── docs/                              # 📚 Documentación técnica adicional
+│   └── manual_facturacion_aws.docx        # Manual detallado del proceso
+    └── Presentacion_Prototipo_AWS.html    # Presentacion 
+│
+├── lambda1-trigger/                   # 🔴 Función Lambda 1 - Trigger
+│   ├── lambda_function.py             # Código principal
+│   ├── requirements.txt               # Dependencias
+│
+├── lambda2-orquestador/               # 🟡 Función Lambda 2 - Orquestador
+│   ├── lambda_function.py             # Código principal
+│   ├── requirements.txt               # Dependencias
+│
+└── lambda3-sender/                    # 🟢 Función Lambda 3 - Sender
+    ├── lambda_function.py             # Código principal
+    ├── requirements.txt               # Dependencias
+```
+
+### Descripción de directorios:
+
+| Directorio | Descripción |
+|-----------|-------------|
+| `docs/` | Documentación técnica y presentacion |
+| `lambda1-trigger/` | Código de la primera función Lambda que detecta y filtra emails con asunto "CUENTA DE COBRO" |
+| `lambda2-orquestador/` | Código de la segunda función Lambda que procesa Excel, invoca Bedrock y genera PDFs |
+| `lambda3-sender/` | Código de la tercera función Lambda que envía emails con los PDFs adjuntos |
+
+---
 
 ---
 
@@ -55,41 +89,6 @@ Lambda 3 — facturacion-sender
     ▼
 📧 Destinatario recibe la cuenta de cobro
 ```
----
-## 📁 Estructura del Repositorio
-
-```
-AI_Finance/
-├── README.md                          # Documentación principal
-│
-├── docs/                              # 📚 Documentación técnica adicional
-│   └── manual_facturacion_aws.docx        # Manual detallado del proceso
-    └── Presentacion_Prototipo_AWS.html    # Presentacion 
-│
-├── lambda1-trigger/                   # 🔴 Función Lambda 1 - Trigger
-│   ├── lambda_function.py             # Código principal
-│   ├── requirements.txt               # Dependencias
-│
-├── lambda2-orquestador/               # 🟡 Función Lambda 2 - Orquestador
-│   ├── lambda_function.py             # Código principal
-│   ├── requirements.txt               # Dependencias
-│
-└── lambda3-sender/                    # 🟢 Función Lambda 3 - Sender
-    ├── lambda_function.py             # Código principal
-    ├── requirements.txt               # Dependencias
-```
-
-### Descripción de directorios:
-
-| Directorio | Descripción |
-|-----------|-------------|
-| `docs/` | Documentación técnica y presentacion |
-| `lambda1-trigger/` | Código de la primera función Lambda que detecta y filtra emails con asunto "CUENTA DE COBRO" |
-| `lambda2-orquestador/` | Código de la segunda función Lambda que procesa Excel, invoca Bedrock y genera PDFs |
-| `lambda3-sender/` | Código de la tercera función Lambda que envía emails con los PDFs adjuntos |
-
----
-
 ---
 
 ## Componentes
